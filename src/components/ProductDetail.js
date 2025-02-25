@@ -17,12 +17,14 @@ const ProductDetail = () => {
   }, [id]);
 
   if (loading) return <p>Loading product details...</p>;
+  if (!product) return <p>Product not found</p>;
 
   return (
-    <div>
+    <div style={{ textAlign: "center", padding: "20px" }}>
       <h2>{product.title}</h2>
+      <img src={product.thumbnail} alt={product.title} style={{ width: "300px", height: "300px", objectFit: "cover", borderRadius: "10px" }} />
       <p>{product.description}</p>
-      <p>${product.price}</p>
+      <p><strong>Price: </strong>${product.price}</p>
     </div>
   );
 };

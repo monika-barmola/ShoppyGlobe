@@ -8,7 +8,7 @@ const ProductList = () => {
   if (error) return <p>Error fetching products</p>;
 
   return (
-    <div>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "20px", padding: "20px" }}>
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}
