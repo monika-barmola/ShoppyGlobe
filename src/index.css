@@ -102,3 +102,9 @@ nav a {
   cursor: pointer;
   margin-top: 5px;
 }
+
+.loading {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
