@@ -6,8 +6,8 @@ const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div style={{ border: "1px solid #ddd", padding: "10px", margin: "10px", textAlign: "center" }}>
-      <img src={product.thumbnail} alt={product.title} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+    <div className="product-item">
+      <img src={product.thumbnail} alt={product.title} />
       <h3>{product.title}</h3>
       <p>${product.price}</p>
       <Link to={`/product/${product.id}`}>View Details</Link>
